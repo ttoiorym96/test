@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<!-- contanaはstruts2での定数を設定するタグ。  -->
+<!-- packageタグ自体に意味はあまりないが、継承などをする際に、packageタグのextends属性を使用する。 -->
+<constant name="struts.devMode" value="true" />
+<package name="com.internousdev.login.action" extends="struts-default">
+
+<!-- LoginActionクラスのexecuteメソッドが最初に呼び出される一文 -->
+<action name="LoginAction" class="com.internousdev.login.action.LoginAction" method="execute">
+
+<!-- executeメソッドの処理結果に応じてフロントに送るJSPファイルを設定している。 -->
+<result name="success">loginSuccsess.jsp</result>
+<result name="error">loginError.jsp</result>
+</action>
+</package>
+</struts>
