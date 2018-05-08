@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundaction//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+  <constant name="struts.devMode" value="true"/>
+  <package name="create.action" extends="struts-default">
+
+  <action name="HomeAction" class="create.action.HomeAction" method="execute">
+  <result name="success">home.jsp</result>
+  </action>
+
+  <action name="UserCreateAction" class="create.action.UserCreateAction" method="execute">
+  <result name="success">userCreate.jsp</result>
+  </action>
+
+  <action name="UserCreateConfirmAction" class="create.action.UserCreateConfirmAction" method="execute">
+  <result name="success">userCreateConfirm.jsp</result>
+  <result name="error">userCreate.jsp</result>
+  </action>
+
+  <action name="UserCreateCompleteAction" class="create.action.UserCreateCompleteAction" method="execute">
+  <result name="success">userCreateComplete.jsp</result>
+  </action>
+
+  </package>
+</struts>
